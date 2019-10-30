@@ -3,7 +3,7 @@ node {
         git 'https://github.com/lakshmaiah212/java.git'
     }
     stage('compile-package'){
-        def mvnhome = tool name: '', type: 'maven'
+        def mvnhome = tool name: 'maven', type: 'maven'
         sh "${mvnhome}/bin/mvn package"
     }
 }
